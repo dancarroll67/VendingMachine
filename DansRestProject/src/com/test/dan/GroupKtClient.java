@@ -49,6 +49,7 @@ public class GroupKtClient {
 		} catch (Exception e) {
 			System.out.println("\n Error while calling callForUsa REST Service");
 			System.out.println(e);
+			e.printStackTrace();
 		}
 
 		//br.close();
@@ -113,6 +114,7 @@ public class GroupKtClient {
 		} catch (Exception e) {
 			System.out.println("\n Error while calling callForAll REST Service");
 			System.out.println(e);
+			e.printStackTrace();
 		}
 
 		//br.close();	

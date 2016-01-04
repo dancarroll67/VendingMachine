@@ -1,4 +1,13 @@
-com\crunchify\restjersey\DansHelloWorld.class
-com\crunchify\restjersey\DansHelloWorld2.class
-com\crunchify\restjersey\FtoCService.class
-com\crunchify\restjersey\CtoFService.class
+net\carroll\dan\restjersey\DansHelloWorldClient.class
+net\carroll\dan\restjersey\DansHelloWorld.class
+net\carroll\data\MessageAccessor.class
+net\carroll\dan\messageservice\MessageService.class
+net\carroll\data\Message.class
+net\carroll\dan\restjersey\CtoFService.class
+com\test\dan\GroupKtClient.class
+net\carroll\data\Messages.class
+net\carroll\dan\messageservice\MessageClient.class
+com\test\dan\JsonTest.class
+net\carroll\dan\restjersey\FtoCService.class
+net\carroll\dan\messageservice\MessageServiceBase.class
+net\carroll\dan\messageservice\MessageResource.class

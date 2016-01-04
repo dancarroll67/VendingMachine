@@ -1,4 +1,4 @@
-package com.crunchify.restjersey;
+package net.carroll.dan.restjersey;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -37,23 +37,24 @@ public class DansHelloWorld {
 		@POST
 		@Path("/helloworldpost")
 		@Consumes(MediaType.APPLICATION_JSON)
-		public Response crunchifyREST(InputStream incomingData) {
-			StringBuilder crunchifyBuilder = new StringBuilder();
+		public Response dansRestServicePostJson(InputStream incomingData) {
+			System.out.println(" hello world rest POST entry");
+			StringBuilder sb = new StringBuilder();
 			try {
 				BufferedReader in = new BufferedReader(new InputStreamReader(incomingData));
 				String line = null;
 				while ((line = in.readLine()) != null) {
-					crunchifyBuilder.append(line);
+					sb.append(line);
 					System.out.println("line = " + line);
 					parseJsonObject(line);
 				}
 			} catch (Exception e) {
 				System.out.println("Error Parsing: - ");
 			}
-			System.out.println("Data Received: " + crunchifyBuilder.toString());
+			System.out.println("Data Received: " + sb.toString());
 	 
 			// return HTTP response 200 in case of success
-			return Response.status(200).entity(crunchifyBuilder.toString()).build();
+			return Response.status(200).entity(sb.toString()).build();
 		}
 		
 		private void parseJsonObject(String str) {

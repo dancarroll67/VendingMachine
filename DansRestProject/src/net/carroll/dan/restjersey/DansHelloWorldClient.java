@@ -1,4 +1,4 @@
-package com.crunchify.restjersey;
+package net.carroll.dan.restjersey;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -22,7 +22,7 @@ public class DansHelloWorldClient {
 		
 			// Step2: Now pass JSON File Data to REST Service
 			try {
-				URL url = new URL("http://localhost:8080/CrunchifyRESTJerseyExample/crunchify/helloworldpost/");
+				URL url = new URL("http://localhost:8080/DansRestProject/services/helloworldpost/");
 				URLConnection connection = url.openConnection();
 				connection.setDoOutput(true);
 				connection.setRequestProperty("Content-Type", "application/json");
@@ -43,6 +43,7 @@ public class DansHelloWorldClient {
 			} catch (Exception e) {
 				System.out.println("\n Error while calling hello world REST Service");
 				System.out.println(e);
+				e.printStackTrace();
 			}
  
 			//br.close();
@@ -53,14 +54,13 @@ public class DansHelloWorldClient {
 	}
 	
 	private static JSONObject getJsonObject() {
-		// Step1: Let's 1st read file from fileSystem
-		// Change CrunchifyJSON.txt path here
+	
 		System.out.println("hello world client getJson");
 		String string = "";
 		try {
-			InputStream crunchifyInputStream = new FileInputStream("C:\\Users\\dcarroll\\Documents\\CrunchifyJSON.txt");
-			InputStreamReader crunchifyReader = new InputStreamReader(crunchifyInputStream);
-			BufferedReader br = new BufferedReader(crunchifyReader);
+			InputStream myInputStream = new FileInputStream("C:\\Users\\dcarroll\\Documents\\restServiceJSON.txt");
+			InputStreamReader myReader = new InputStreamReader(myInputStream);
+			BufferedReader br = new BufferedReader(myReader);
 			String line;
 			while ((line = br.readLine()) != null) {
 				string += line + "\n";

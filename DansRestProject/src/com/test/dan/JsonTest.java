@@ -41,7 +41,7 @@ public class JsonTest {
 	public void testJson(){
 		
 		JSONObject obj =  new JSONObject();
-		obj.put("name", "mkyong.com");
+		obj.put("name", "danno");
 		obj.put("age", new Integer(100));
 
 		JSONArray list = new JSONArray();
@@ -55,14 +55,14 @@ public class JsonTest {
 	}
 	
 	private JSONObject getJsonObject() {
-		// Step1: Let's 1st read file from fileSystem
-		// Change CrunchifyJSON.txt path here
+		
+		
 		System.out.println("json test getJson");
 		String string = "";
 		try {
-			InputStream crunchifyInputStream = new FileInputStream("C:\\Users\\dcarroll\\Documents\\CrunchifyJSON.txt");
-			InputStreamReader crunchifyReader = new InputStreamReader(crunchifyInputStream);
-			BufferedReader br = new BufferedReader(crunchifyReader);
+			InputStream myInputStream = new FileInputStream("C:\\Users\\dcarroll\\Documents\\restServiceJSON.txt");
+			InputStreamReader myReader = new InputStreamReader(myInputStream);
+			BufferedReader br = new BufferedReader(myReader);
 			String line;
 			while ((line = br.readLine()) != null) {
 				string += line + "\n";

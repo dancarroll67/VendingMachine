@@ -1,7 +1,11 @@
-taken from:
-http://crunchify.com/how-to-build-restful-service-with-java-using-jax-rs-and-jersey/
 
-http://localhost:8080/DansRestProject/crunchify/ctofservice/16
-http://localhost:8080/DansRestProject/crunchify/ctofservice  <-- no parm
 
-http://localhost:8080/DansRestProject/crunchify/danshelloworld/
+http://localhost:8080/DansRestProject/services/ctofservice/16
+http://localhost:8080/DansRestProject/services/ctofservice  <-- no parm
+
+http://localhost:8080/DansRestProject/services/danshelloworld/
+http://localhost:8080/DansRestProject/services/helloworldpost/
+
+http://localhost:8080/DansRestProject/services/messageservice   <-- gets all
+http://localhost:8080/DansRestProject/services/messageservice/0 <-- get the 1st record
+

@@ -1,4 +1,4 @@
-package com.crunchify.restjersey;
+package net.carroll.dan.restjersey;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

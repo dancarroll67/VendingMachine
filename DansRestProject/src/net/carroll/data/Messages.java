@@ -17,11 +17,11 @@ public class Messages {
 	public String toString() {
 		if (null!= messages) {
 			StringBuffer sb = new StringBuffer();
-			sb.append("Messages list size: " + messages.size());
+			sb.append("Messages list size: " + messages.size() +"\n");
 			 for(Message msg : this.getMessages())
 			    {
-			        System.out.println(msg.getId());
-			        System.out.println(msg.getText());
+				 sb.append(msg.getId());
+				 sb.append(msg.getText()+ "\n");
 			    }
 			return sb.toString();
 		} else {

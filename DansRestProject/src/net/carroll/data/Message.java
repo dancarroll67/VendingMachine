@@ -13,7 +13,7 @@ public class Message {
 	
 	public String toString() {
 		return "Message: " + id + "::" + text;
-	}
+	}	
 	
 	public Message(){
 		super();
