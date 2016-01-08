@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Message {
 
+	//danc comment added at work, check if I see it at home
 	private Long id;
 	private String text;
 	private Date createDate;
