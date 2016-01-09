@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import net.carroll.vending.data.LoadedProduct;
+import net.carroll.vending.state.VendingMachineState;
 
 public class SnackMachine extends VendingMachineBase implements VendingMachineInterface {
 
@@ -27,8 +28,6 @@ public class SnackMachine extends VendingMachineBase implements VendingMachineIn
 		
 	};
 	public void giveChange() {}
-
-	
 	
 	
 }

@@ -7,6 +7,7 @@ public class VendingMachineBank {
 
 	private BigDecimal totalAmount;
 	private BigDecimal inputAmount;
+	
 	public BigDecimal getTotalAmount() {
 		return totalAmount;
 	}

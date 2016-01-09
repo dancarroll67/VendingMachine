@@ -4,15 +4,14 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.tomcat.util.codec.BinaryDecoder;
-import org.apache.tomcat.util.codec.DecoderException;
-
 import net.carroll.vending.SnackMachine;
 import net.carroll.vending.VendingMachineBank;
-import net.carroll.vending.VendingMachineInterface;
 import net.carroll.vending.data.LoadedProduct;
 import net.carroll.vending.data.LoadedProductBuilder;
 import net.carroll.vending.data.Product;
+import net.carroll.vending.data.VendingMachineActionEnum;
+import net.carroll.vending.factory.VendingMachineFactory;
+import net.carroll.vending.state.VendingMachineState;
 
 public class BaseTest {
 
@@ -29,11 +28,15 @@ public class BaseTest {
 	
 	
 	public static void main(String[] args) {
-		//make the vending machine
-		SnackMachine sm = new SnackMachine();
+		//make the vending machine		
+		SnackMachine sm = VendingMachineFactory.getsingleton().getSnackMachine();
 		sm.setBank(new VendingMachineBank());
 		sm.setVmId(100);
 		
+		//1st test, customer can't use yet as it's in new state (not ready)
+		System.out.println(" the machine state: "+ sm.getMachineState().toString());
+		System.out.println("  button pressed allowed: " +sm.getMachineState().actionAllowed(VendingMachineActionEnum.BUTTONPRESSED));
+
 		//load money
 		sm.loadBankMoney(new BigDecimal(25.50));
 		
