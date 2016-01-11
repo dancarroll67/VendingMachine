@@ -29,7 +29,7 @@ public class BaseTest {
 	
 	public static void main(String[] args) {
 		//make the vending machine		
-		SnackMachine sm = VendingMachineFactory.getsingleton().getSnackMachine();
+		SnackMachine sm = VendingMachineFactory.getSingleton().getSnackMachine();
 		sm.setBank(new VendingMachineBank());
 		sm.setVmId(100);
 		

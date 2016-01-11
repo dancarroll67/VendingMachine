@@ -10,9 +10,12 @@ public class VendingMachineFactory {
 	private VendingMachineFactory() {		
 	}
 	
-	public static VendingMachineFactory getsingleton() {
+	public static VendingMachineFactory getSingleton() {
 		if (singleton==null) {
-			singleton = new VendingMachineFactory();
+			synchronized (VendingMachineFactory.class) {
+				singleton = new VendingMachineFactory();
+			}
+			
 		}
 			
 		return singleton;

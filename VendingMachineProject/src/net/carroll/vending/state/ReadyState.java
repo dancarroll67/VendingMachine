@@ -1,5 +1,6 @@
 package net.carroll.vending.state;
 
+import net.carroll.vending.VendingMachineInterface;
 import net.carroll.vending.data.VendingMachineActionEnum;
 
 public class ReadyState extends VendingMachineState implements VendingMachineStateInterface {
@@ -13,7 +14,7 @@ public class ReadyState extends VendingMachineState implements VendingMachineSta
 		return true;	
 	}
 	@Override
-	public String toString() {
+	public String toString(VendingMachineInterface context) {
 		return "Ready State";
 	}
 }

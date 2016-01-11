@@ -1,5 +1,6 @@
 package net.carroll.vending.state;
 
+import net.carroll.vending.VendingMachineInterface;
 import net.carroll.vending.data.VendingMachineActionEnum;
 
 public class NewState  extends VendingMachineState implements VendingMachineStateInterface {
@@ -15,7 +16,7 @@ public class NewState  extends VendingMachineState implements VendingMachineStat
 	}
 
 	@Override
-	public String toString() {
+	public String toString(VendingMachineInterface context) {
 		return "New State";
 	}
 

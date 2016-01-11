@@ -9,6 +9,8 @@ import net.carroll.vending.state.VendingMachineState;
 public class SnackMachine extends VendingMachineBase implements VendingMachineInterface {
 
 	
+	
+	
 	public void loadBankMoney(BigDecimal total) {
 		this.getBank().setTotalAmount(total);
 	}
