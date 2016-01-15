@@ -13,7 +13,7 @@ public interface VendingMachineInterface {
 	public void loadProducts(List<LoadedProduct> products);	
 	
 	public void takeMoney(BigDecimal bd);
-	public int buttonPressed();
+	public int buttonPressed(int buttonID);
 	public void vendProduct();
 	public void giveChange();
 	

@@ -3,7 +3,7 @@ package net.carroll.vending;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-public class VendingMachineBank {
+public class VendingMachineBank implements Cloneable{
 
 	private BigDecimal totalAmount;
 	private BigDecimal inputAmount;
@@ -19,6 +19,11 @@ public class VendingMachineBank {
 	}
 	public void setInputAmount(BigDecimal inputAmount) {
 		this.inputAmount = inputAmount;
+	}
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		//BigDecimal is immutable, so basic clone() is good
+	    return super.clone();
 	}
 
 }

@@ -34,25 +34,33 @@ public class BaseTest {
 		sm.setVmId(100);
 		
 		//1st test, customer can't use yet as it's in new state (not ready)
-		System.out.println(" the machine state: "+ sm.getMachineState().toString());
+		System.out.println(" \n new machine, the machine state: "+ sm.getMachineState().toString());
 		System.out.println("  button pressed allowed: " +sm.getMachineState().actionAllowed(VendingMachineActionEnum.BUTTONPRESSED));
 
 		//load money
 		sm.loadBankMoney(new BigDecimal(25.50));
-		
+		System.out.println(" \n money loaded, the machine state: "+ sm.getMachineState().toString());
+		System.out.println("  button pressed allowed: " +sm.getMachineState().actionAllowed(VendingMachineActionEnum.BUTTONPRESSED));
+	
 		//load products
 		List<LoadedProduct> l = new ArrayList<LoadedProduct>();
 		l.add(getLoadedProduct());
 		sm.loadProducts(l);
+		System.out.println("\n load products, the machine state: "+ sm.getMachineState().toString());
+		System.out.println("  button pressed allowed: " +sm.getMachineState().actionAllowed(VendingMachineActionEnum.BUTTONPRESSED));
+	
 		
 		//ready to go
 		
 		sm.takeMoney(new BigDecimal(1.50));
+		System.out.println("\n customer money put it, the machine state: "+ sm.getMachineState().toString());
+		System.out.println("  button pressed allowed: " +sm.getMachineState().actionAllowed(VendingMachineActionEnum.BUTTONPRESSED));
+	
 	 
-		int result = sm.buttonPressed();
+		int result = sm.buttonPressed(22);
 		
 		if (result == 0) {
-			System.out.println(" product vended");
+			System.out.println("\n product vended");
 		} else {
 			System.out.println(" product not vended");
 		}

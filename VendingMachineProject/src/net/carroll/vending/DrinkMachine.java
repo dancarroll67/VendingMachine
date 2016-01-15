@@ -16,7 +16,7 @@ public class DrinkMachine  extends VendingMachineBase implements VendingMachineI
 				
 			} ;
 			
-			public int buttonPressed() {
+			public int buttonPressed(int buttonID) {
 				return 0;  //success
 			}
 			
